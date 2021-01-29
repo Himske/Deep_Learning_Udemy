@@ -12,3 +12,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 If you want to disable the execution:
 Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser
+
+Upgrade pip:
+============
+python -m pip install --upgrade pip
