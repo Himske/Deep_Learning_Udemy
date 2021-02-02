@@ -130,3 +130,6 @@ dmypy.json
 
 # VSCode
 .vscode
+
+# CNN dataset
+/convolutional_neural_network/dataset/
