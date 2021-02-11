@@ -5,7 +5,7 @@ from matplotlib.pylab import bone, pcolor, colorbar, plot, show
 from sklearn.preprocessing import MinMaxScaler
 
 # import and split dataset
-dataset = pd.read_csv('self_organizing_map/Credit_Card_Applications.csv')
+dataset = pd.read_csv('dataset/Credit_Card_Applications.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
@@ -55,5 +55,5 @@ if outlier_maps:
     frauds = np.concatenate(outlier_maps, axis=0)
     frauds = scaler.inverse_transform(frauds)
 
-    np.savetxt(fname='self_organizing_map/Potential_Frauds.csv', X=frauds, fmt='%.3f', delimiter=',',
+    np.savetxt(fname='dataset/Potential_Frauds.csv', X=frauds, fmt='%.3f', delimiter=',',
                header='CustomerID,A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14')

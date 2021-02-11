@@ -11,7 +11,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.preprocessing import StandardScaler
 
 # Importing the dataset
-dataset = pd.read_csv('mega_case_study/Credit_Card_Applications.csv')
+dataset = pd.read_csv('dataset/Credit_Card_Applications.csv')
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 

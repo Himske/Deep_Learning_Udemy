@@ -9,7 +9,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder, StandardScaler
 
 # Import and split dataset
-dataset = pd.read_csv('artificial_neural_network/Churn_Modelling.csv')
+dataset = pd.read_csv('dataset/Churn_Modelling.csv')
 X = dataset.iloc[:, 3:-1].values  # Remove unnecessary columns and result (y)
 y = dataset.iloc[:, -1].values
 

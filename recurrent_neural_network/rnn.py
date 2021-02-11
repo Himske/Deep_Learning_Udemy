@@ -6,7 +6,7 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, LSTM
 
 # import the training data
-dataset_train = pd.read_csv('recurrent_neural_network/Google_Stock_Price_Train.csv')
+dataset_train = pd.read_csv('dataset/Google_Stock_Price_Train.csv')
 training_set = dataset_train[['Open']].to_numpy()
 
 # feature scaling
@@ -51,7 +51,7 @@ regressor.compile(optimizer='adam', loss='mean_squared_error')
 regressor.fit(X_train, y_train, epochs=150, batch_size=32)
 
 # make predictions
-dataset_test = pd.read_csv('recurrent_neural_network/Google_Stock_Price_Test.csv')
+dataset_test = pd.read_csv('dataset/Google_Stock_Price_Test.csv')
 real_stock_price = dataset_test[['Open']].to_numpy()
 
 dataset_total = pd.concat((dataset_train['Open'], dataset_test['Open']), axis=0)
@@ -80,4 +80,4 @@ plt.ylabel('Google Stock Price')
 plt.legend()
 plt.show()
 
-np.savetxt('recurrent_neural_network/predicted_stock_price.csv', predicted_stock_price.T)
+np.savetxt('dataset/predicted_stock_price.csv', predicted_stock_price.T)

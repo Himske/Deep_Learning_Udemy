@@ -3,15 +3,15 @@ import pandas as pd
 import torch
 
 # importing the dataset
-movies = pd.read_csv('bolzman_machine/ml-1m/movies.dat', sep='::', header=None, engine='python', encoding='latin-1')
-users = pd.read_csv('bolzman_machine/ml-1m/users.dat', sep='::', header=None, engine='python', encoding='latin-1')
-ratings = pd.read_csv('bolzman_machine/ml-1m/ratings.dat', sep='::', header=None, engine='python', encoding='latin-1')
+movies = pd.read_csv('dataset/ml-1m/movies.dat', sep='::', header=None, engine='python', encoding='latin-1')
+users = pd.read_csv('dataset/ml-1m/users.dat', sep='::', header=None, engine='python', encoding='latin-1')
+ratings = pd.read_csv('dataset/ml-1m/ratings.dat', sep='::', header=None, engine='python', encoding='latin-1')
 
 # preparing training and test sets
-training_set = pd.read_csv('bolzman_machine/ml-100k/u1.base', delimiter='\t')
+training_set = pd.read_csv('dataset/ml-100k/u1.base', delimiter='\t')
 training_set = np.array(training_set, dtype='int64')
 
-test_set = pd.read_csv('bolzman_machine/ml-100k/u1.test', delimiter='\t')
+test_set = pd.read_csv('dataset/ml-100k/u1.test', delimiter='\t')
 test_set = np.array(test_set, dtype='int64')
 
 combined = np.append(training_set, test_set, axis=0)

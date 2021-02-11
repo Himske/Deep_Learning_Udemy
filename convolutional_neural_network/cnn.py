@@ -3,7 +3,7 @@ import tensorflow as tf
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
-dataset_dir = 'convolutional_neural_network/dataset'
+dataset_dir = 'dataset/cnn'
 
 # Preprocessing the training dataset
 train_datagen = ImageDataGenerator(rescale=1./255, shear_range=0.2, zoom_range=0.2, horizontal_flip=True)
